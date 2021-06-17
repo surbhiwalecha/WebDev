@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="clock.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <script src="clock.js"></script>
+  </head>
+  <body onload="clk_12_hr()">
+    <div class="container">
+      <h1>Online Digital Clock</h1>
+      <div class="clock">
+        <div id="clock_12hr" class="clock_12hr">
+          <!-- <h2>12 HR Clock</h2> -->
+          <div id="time"> </div>
+          <div id="date"> </div>
+          <div id="day"> </div>
+        </div>
+        <div id="clock_24hr"  class="clock_24hr">
+          <!-- <h2>24 HR Clock</h2> -->
+          <div id="time_24">  </div>
+          <div id="date_24">  </div>
+          <div id="day_24"> </div>
+        </div>
+      </div>
+      <div id="button">
+        <button id="hr_12" class="btn"  onclick="clk_12_hr()">12 Hour</button>
+        <button id="hr_24" class="btn" onclick="clk_24_hr()" >24 Hour</button>
+      </div>
+      
+    </div>
+  </body>
+</html>

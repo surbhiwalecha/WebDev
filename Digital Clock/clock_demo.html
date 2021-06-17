@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>A script on this page starts this clock:</p>
+<p id="demo"></p>
+
+<button onclick="myStopFunction()">Stop time</button>
+
+<script>
+let time_12hr = setInterval(function(){ curr_time_12hr() }, 1000);
+
+function curr_time_12hr() {
+    let d = new Date();
+    let h = d.getHours() % 12 || 12;
+    let m = d.getMinutes();
+    let s = d.getSeconds();
+    let h_f = h.toString().padStart(2, '0');
+    let m_f = m.toString().padStart(2, '0');
+    let s_f = s.toString().padStart(2, '0');
+    let suf = (d.getHours() > 12) ? "PM" : "AM";
+    let curr_day = d.toDateString().substring(4, -1);
+    let curr_date = d.toDateString().substring(4);
+    let curr_time = h_f + " : " + m_f + " : " + s_f + " " ;
+    document.getElementById("time").innerHTML = curr_time;
+    document.getElementById("date").innerHTML = curr_date;
+    document.getElementById("day").innerHTML = curr_day;
+
+}
+function myStopFunction(){
+    clearInterval(time_12hr);
+}
+</script>
+
+</body>
+</html>

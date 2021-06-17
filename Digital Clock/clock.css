@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+
+body{
+    background-color: black;
+    color:rgb(226,226,226);
+}
+.container{
+    align-items: center;
+}
+.container h1{
+    min-height: 15vh;
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: slide 5s linear infinite forwards ; 
+    background: repeating-linear-gradient( -45deg, 
+    red,orange,yellow,green,blue,indigo,violet
+    ,red,orange,yellow,green,blue,indigo,violet);
+    background-size: 600vw 600vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+@keyframes slide {
+    0%{
+        background-position-x: 0%;
+            }
+    100%{
+        background-position-x: 600vw;
+            }
+}
+
+ .clock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    height:60vh;
+   position: relative;
+} 
+.clock_12hr{
+    /* border:2px solid purple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    /* position: absolute;
+    top: 20%;
+    left: 30%;
+    height: 50vh; */
+    /* width: 50vh; */
+    /* z-index : -1; */
+   
+}
+.clock_24hr
+{
+    /* border:2px solid purple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    /* position: absolute;
+    top: 20%; */
+    /* left: 30%; */
+    /* width: 100vh; */
+    /* height: 50vh; */
+}
+#time, #time_24{
+
+    font-size: 60px;
+    font-family: 'Orbitron', sans-serif;
+    padding: 5px;
+    margin:5px;
+    text-align: center;
+}
+
+#date, #date_24{
+    font-family: 'Satisfy', cursive;
+        font-size: 30px;
+        padding: 5px;
+        text-align: center;
+}
+#day, #day_24{
+    font-family: 'Satisfy', cursive;
+    padding: 5px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.btn{
+   
+    /* position: relative;
+    top:40%;*/
+    padding: 5px 30px; 
+    margin:20px;
+    font-family: 'Satisfy', cursive;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover, .btn:focus{
+   
+    background: repeating-linear-gradient( -45deg, 
+    orange,yellow,violet,lime);
+}
+
+
+#button{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    position: inherit;
+   top: 10px;
+ 
+}
